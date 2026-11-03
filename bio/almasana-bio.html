@@ -1,0 +1,88 @@
+<title>Alma Sana · Deisy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Quicksand:wght@400;500;600&display=swap">
+<style>
+/* Layout: columna estrecha tipo enlace-en-bio; arco con la foto arriba, botones apilados; marca Alma Sana */
+:root{
+  --bg:#f4ebe0; --card:#fbf6ef; --ink:#3a0f19; --muted:#7c5a5f;
+  --wine:#7d1d2f; --wine-2:#5a1423; --on-wine:#f6ece0; --line:#e3d2c6;
+  --display:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  --body:"Quicksand","Avenir Next","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#2a0b13; --card:#360f1a; --ink:#f3e7da; --muted:#c9a9a6; --wine:#e3b4a9; --wine-2:#f0cfc6; --on-wine:#2a0b13; --line:#4f1d2a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#2a0b13; --card:#360f1a; --ink:#f3e7da; --muted:#c9a9a6; --wine:#e3b4a9; --wine-2:#f0cfc6; --on-wine:#2a0b13; --line:#4f1d2a; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:28px 40px}
+.wrap{max-width:440px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+.logo{line-height:.86;color:var(--wine)}
+.logo .a{font-family:var(--display);font-style:italic;font-size:1.7rem;font-weight:500;display:block}
+.logo .s{font-weight:600;font-size:1.25rem;letter-spacing:.03em}
+.arch{width:min(220px,60vw);aspect-ratio:5/6;max-width:100%;border-radius:999px 999px 18px 18px;overflow:hidden;
+  box-shadow:0 0 0 6px var(--card),0 0 0 7px var(--line)}
+.arch img{width:100%;height:100%;object-fit:cover;display:block}
+h1{font-family:var(--display);font-weight:600;font-size:2.2rem;line-height:1.05;margin:0;text-wrap:balance}
+h1 em{color:var(--wine);font-weight:500}
+.role{margin:6px 0 0;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);font-weight:600}
+.intro{margin:0;font-family:var(--display);font-style:italic;font-size:1.25rem;line-height:1.35;color:var(--muted);max-width:34ch}
+.links{width:100%;display:flex;flex-direction:column;gap:12px}
+a.link{display:flex;align-items:center;gap:14px;text-align:left;text-decoration:none;color:var(--ink);background:var(--card);
+  border:1.5px solid var(--line);border-radius:18px;padding:14px 18px;transition:transform .15s,border-color .15s}
+a.link:hover{border-color:var(--wine);transform:translateY(-1px)}
+a.link:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+a.link .ic{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--bg);font-size:1.25rem}
+a.link .t{display:flex;flex-direction:column;min-width:0}
+a.link strong{font-weight:600;font-size:1rem}
+a.link span.d{font-size:.85rem;color:var(--muted)}
+a.link.main{background:var(--wine);border-color:var(--wine);color:var(--on-wine)}
+a.link.main span.d{color:var(--on-wine);opacity:.85}
+a.link.main .ic{background:rgba(255,255,255,.14)}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tags span{font-size:.78rem;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+footer{font-size:.8rem;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer .mail{user-select:all;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<main class="wrap">
+  <div class="logo" aria-label="Alma Sana"><span class="a">alma</span><span class="s">sana</span></div>
+  <div class="arch"><img src="deisy.jpg" alt="Deisy Ochoa Betancur"></div>
+  <div>
+    <h1>Deisy <em>Ochoa Betancur</em></h1>
+    <p class="role">Terapeuta integral · Sexualidad sagrada</p>
+  </div>
+  <p class="intro">Acompaño a mujeres en su retorno sagrado a su cuerpo, su placer y su poder.</p>
+
+  <nav class="links" aria-label="Enlaces">
+    <a class="link main" href="https://wa.me/573013388823?text=Hola%20Deisy%2C%20vengo%20de%20Instagram%20y%20quiero%20reservar%20una%20sesi%C3%B3n" target="_blank" rel="noopener">
+      <span class="ic" aria-hidden="true">🪽</span>
+      <span class="t"><strong>Reserva tu sesión conmigo</strong><span class="d">Consulta online internacional por WhatsApp</span></span>
+    </a>
+    <a class="link" href="https://claude.ai/artifact/8XZ6P3iFSgPwXxCbn3UeFx" target="_blank" rel="noopener">
+      <span class="ic" aria-hidden="true">🌸</span>
+      <span class="t"><strong>Haz el test «Tu cuerpo recuerda»</strong><span class="d">Descubre tu perfil en 5 minutos y llévate el ebook gratis</span></span>
+    </a>
+    <a class="link" href="https://wa.me/573013388823?text=Hola%20Deisy%2C%20quiero%20informaci%C3%B3n%20del%20retiro%20Mujeres%20Salvajes" target="_blank" rel="noopener">
+      <span class="ic" aria-hidden="true">🔥</span>
+      <span class="t"><strong>Retiro Mujeres Salvajes</strong><span class="d">Plazas limitadas · Pide información</span></span>
+    </a>
+    <a class="link" href="https://www.instagram.com/almasana111/" target="_blank" rel="noopener">
+      <span class="ic" aria-hidden="true">✨</span>
+      <span class="t"><strong>Instagram @almasana111</strong><span class="d">Contenido sobre sexualidad sagrada y sanación</span></span>
+    </a>
+  </nav>
+
+  <div class="tags" aria-label="Lo que hago">
+    <span>Sexualidad sagrada</span><span>Biosanación emocional</span><span>Camino holístico</span><span>Inmersión en hielo</span>
+  </div>
+
+  <footer>
+    <span>Escríbeme: <span class="mail">info@almasana111.com</span></span>
+    <span>WhatsApp: +57 301 338 8823</span>
+    <span>© Alma Sana</span>
+  </footer>
+</main>

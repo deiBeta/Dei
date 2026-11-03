@@ -233,17 +233,45 @@ function showResult(){
       <p class="note" style="text-align:center">WhatsApp: +57 301 338 8823</p>
       <button class="btn ghost" id="again">Repetir el test</button>
     </div>
+    <div class="card ebook">
+      <p class="eyebrow" style="text-align:center">Tu regalo</p>
+      <h2 style="text-align:center">El ebook <em style="color:var(--wine)">Tu cuerpo recuerda</em></h2>
+      <p style="text-align:center">15 páginas con los cinco perfiles explicados a fondo, una práctica para cada uno y cómo reservar tu sesión con Deisy.</p>
+      <button class="btn" id="dl">Descargar mi ebook</button>
+      <p class="note" id="dlmsg" style="text-align:center" aria-live="polite"></p>
+    </div>
     <div class="help">
       <p><strong>Si estás viviendo una situación de violencia ahora, tu seguridad es lo primero.</strong></p>
       <p>Colombia: Línea 155 · España: 016 · En otros países, llama al número de emergencias local.</p>
       <p>Este test no es un diagnóstico ni sustituye la atención psicológica o médica. Tus respuestas no se han guardado.</p>
     </div>`;
   $("quiz").hidden = true; $("result").hidden = false;
-  $("again").onclick = () => { ans.fill(null); i = 0; $("result").hidden = true; $("intro").hidden = false; window.scrollTo(0,0); };
+  $("dl").onclick = downloadEbook;
+  $("again").onclick =() => { ans.fill(null); i = 0; $("result").hidden = true; $("intro").hidden = false; window.scrollTo(0,0); };
   window.scrollTo(0,0);
 }
 
-$("start").onclick = () => { $("intro").hidden = true; $("quiz").hidden = false; i = 0; render(); };
+const EBOOK = "Tu-cuerpo-recuerda-Alma-Sana.pdf";
+async function downloadEbook(){
+  const msg = $("dlmsg"), btn = $("dl");
+  btn.disabled = true; msg.textContent = "Preparando tu ebook…";
+  try {
+    const dl = window.claude ? await window.claude.use("downloads") : null;
+    if (dl) {
+      const blob = await (await fetch(EBOOK)).blob();
+      await dl.save({ filename: EBOOK, data: blob });
+      msg.textContent = "¡Listo! Tu ebook está guardado.";
+    } else {
+      window.open(new URL(EBOOK, location.href).href, "_blank", "noopener");
+      msg.innerHTML = `Si no se ha abierto, <a href="${EBOOK}" target="_blank" rel="noopener" style="color:var(--wine)">pulsa aquí para abrir el ebook</a>.`;
+    }
+  } catch (e) {
+    msg.textContent = (e && e.code === "declined") ? "Puedes descargarlo cuando quieras pulsando el botón." : "No se ha podido descargar ahora. Escríbele a Deisy por WhatsApp y te lo envía.";
+  }
+  btn.disabled = false;
+}
+
+$("start").onclick =() => { $("intro").hidden = true; $("quiz").hidden = false; i = 0; render(); };
 $("back").onclick = () => { if (i > 0) { i--; render(); } };
 $("next").onclick = () => { if (ans[i] === null) return; if (i < Q.length - 1) { i++; render(); } else showResult(); };
 </script>
