@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tu cuerpo recuerda · Alma Sana</title>
+<style>
+@font-face{font-family:"Cormorant";src:url(assets/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500}
+@font-face{font-family:"Cormorant";src:url(assets/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600}
+@font-face{font-family:"Cormorant";src:url(assets/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic}
+@font-face{font-family:"Cormorant";src:url(assets/cormorant-garamond-latin-600-italic.woff2) format("woff2");font-weight:600;font-style:italic}
+@font-face{font-family:"Quicksand";src:url(assets/quicksand-latin-400-normal.woff2) format("woff2");font-weight:400}
+@font-face{font-family:"Quicksand";src:url(assets/quicksand-latin-500-normal.woff2) format("woff2");font-weight:500}
+@font-face{font-family:"Quicksand";src:url(assets/quicksand-latin-600-normal.woff2) format("woff2");font-weight:600}
+:root{
+  --wine:#7d1d2f; --wine-deep:#5a1423; --ink:#3a0f19; --muted:#7c5a5f;
+  --cream:#f4ebe0; --paper:#fbf7f1; --blush:#ead6d2; --line:#e3d2c6;
+  --serif:"Cormorant",Georgia,serif; --sans:"Quicksand",system-ui,sans-serif;
+}
+@page{size:148mm 210mm;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--sans);color:var(--ink);font-size:9.6pt;line-height:1.55;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:148mm;height:210mm;position:relative;overflow:hidden;background:var(--paper);padding:17mm 15mm 16mm;page-break-after:always;display:flex;flex-direction:column;gap:4mm}
+.page:last-child{page-break-after:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;color:var(--ink);line-height:1.08;text-wrap:balance}
+h2{font-size:25pt}
+h2 em{color:var(--wine);font-weight:500}
+h3{font-size:14pt}
+p{margin:0}
+.eyebrow{font-size:7pt;letter-spacing:.2em;text-transform:uppercase;color:var(--wine);font-weight:600}
+.lead{font-family:var(--serif);font-style:italic;font-size:13.5pt;line-height:1.35;color:var(--wine)}
+.folio{position:absolute;bottom:8mm;left:15mm;right:15mm;display:flex;justify-content:space-between;font-size:6.8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.stack{display:flex;flex-direction:column;gap:2.6mm}
+.rule{height:1px;background:var(--line);border:0;margin:1mm 0}
+.box{background:var(--cream);border-radius:3mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:2mm}
+.wine{background:var(--wine);color:var(--cream)}
+.wine h2,.wine h3,.wine .eyebrow{color:var(--cream)}
+.wine .folio{color:#d9b9b1}
+
+/* Portada */
+.cover{background:var(--wine);color:var(--cream);padding:0;justify-content:space-between}
+.cover .orbit{position:absolute;border:1px solid rgba(244,235,224,.28);border-radius:50%}
+.cover .top{padding:16mm 15mm 0;text-align:center;line-height:.85;position:relative}
+.logo-a{font-family:var(--serif);font-style:italic;font-size:22pt;font-weight:500;display:block}
+.logo-s{font-family:var(--sans);font-weight:600;font-size:16pt;letter-spacing:.03em}
+.cover .mid{position:relative;text-align:center;padding:0 14mm;display:flex;flex-direction:column;gap:5mm;align-items:center}
+.cover .kicker{font-size:7.2pt;letter-spacing:.32em;text-transform:uppercase;color:#e8cfc8}
+.cover h1{color:var(--cream);font-size:48pt;font-weight:500;line-height:.92}
+.cover h1 em{display:block;font-style:italic;font-weight:500}
+.cover .sub{font-family:var(--serif);font-style:italic;font-size:13pt;line-height:1.3;color:#f0dcd5;max-width:96mm}
+.cover .wing{width:16mm;height:1px;background:rgba(244,235,224,.6)}
+.cover .bottom{position:relative;text-align:center;padding:0 15mm 15mm;font-size:7.6pt;letter-spacing:.22em;text-transform:uppercase;color:#e8cfc8}
+.cover .bottom strong{display:block;font-family:var(--serif);font-size:14pt;letter-spacing:.02em;text-transform:none;color:var(--cream);font-weight:500;margin-bottom:1mm}
+
+/* Test */
+.q{display:flex;flex-direction:column;gap:1mm;break-inside:avoid}
+.q .qt{font-weight:600;font-size:9.2pt}
+.q ol{list-style:none;margin:0;padding:0;display:grid;gap:.4mm}
+.q li{display:flex;gap:2mm;font-size:8.6pt;line-height:1.4}
+.q li b{color:var(--wine);font-family:var(--serif);font-size:11pt;line-height:1.05;width:3.2mm;flex:none}
+.tally{display:grid;grid-template-columns:repeat(5,1fr);gap:2mm;text-align:center}
+.tally div{border:1px solid var(--wine);border-radius:2mm;padding:2mm 0 6mm;font-family:var(--serif);font-size:15pt;color:var(--wine)}
+
+/* Perfiles */
+.ptitle{display:flex;align-items:flex-end;gap:4mm}
+.letter{font-family:var(--serif);font-size:58pt;line-height:.75;color:var(--wine);font-weight:500}
+.facets{display:grid;grid-template-columns:1fr 1fr;gap:3mm 5mm}
+.facets div{display:flex;flex-direction:column;gap:.6mm}
+.facets dt{font-size:6.8pt;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);font-weight:600}
+.facets dd{margin:0;font-size:8.7pt;line-height:1.45}
+.gift{border-left:2px solid var(--wine);padding-left:4mm;font-family:var(--serif);font-style:italic;font-size:12pt;line-height:1.3;color:var(--wine)}
+
+/* Sobre Deisy */
+.about{display:grid;grid-template-columns:44mm 1fr;gap:5mm;align-items:start}
+.photo{width:44mm;height:60mm;border-radius:22mm 22mm 3mm 3mm;overflow:hidden;background:var(--blush)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:35% 22%}
+ul.serv{list-style:none;margin:0;padding:0;display:grid;gap:1.6mm}
+ul.serv li{padding-left:5mm;position:relative;font-size:8.8pt}
+ul.serv li::before{content:"";position:absolute;left:0;top:2.1mm;width:2mm;height:2mm;border-radius:50%;background:var(--wine)}
+
+.qr{width:34mm;height:34mm;background:var(--cream);padding:2mm;border-radius:2mm}
+.qr img{width:100%;height:100%;display:block}
+.cta{display:flex;gap:6mm;align-items:center}
+.phone{font-family:var(--serif);font-size:20pt;color:var(--cream);letter-spacing:.02em}
+.small{font-size:7.8pt;line-height:1.5}
+.help{font-size:7.6pt;line-height:1.5;color:#e8cfc8}
+</style>
+</head>
+<body>
+
+<!-- 1 · PORTADA -->
+<section class="page cover">
+  <div class="orbit" style="width:150mm;height:150mm;left:-1mm;top:30mm"></div>
+  <div class="orbit" style="width:118mm;height:118mm;left:15mm;top:46mm"></div>
+  <div class="orbit" style="width:86mm;height:86mm;left:31mm;top:62mm"></div>
+  <div class="top"><span class="logo-a">alma</span><span class="logo-s">sana</span></div>
+  <div class="mid">
+    <span class="kicker">Ebook · Sexualidad sagrada</span>
+    <h1>Tu cuerpo <em>recuerda</em></h1>
+    <span class="wing"></span>
+    <p class="sub">Los cinco perfiles de mujer: cómo lo que viviste habita hoy en tu cuerpo, tu placer y tus vínculos</p>
+  </div>
+  <div class="bottom"><strong>Deisy Ochoa Betancur</strong>Terapeuta integral</div>
+</section>
+
+<!-- 2 · CARTA -->
+<section class="page">
+  <span class="eyebrow">Bienvenida</span>
+  <h2>Querida mujer,</h2>
+  <div class="stack">
+    <p class="lead">Si estás leyendo esto, algo dentro de ti ya ha empezado a moverse.</p>
+    <p>Quizá sientes que tu cuerpo está lejos, que el placer te cuesta, que dices que sí cuando querías decir que no, o que te entregas en tus relaciones hasta perderte.</p>
+    <p>Nada de eso es un defecto. Es la forma en que tu cuerpo aprendió a cuidarte a partir de lo que viviste.</p>
+    <p>En estas páginas vas a encontrar un test sencillo, cinco perfiles de mujer en los que quizá te reconozcas y una práctica para empezar a volver a ti.</p>
+    <p>Léelo despacio, sin juicio y con una mano en el corazón. Tu cuerpo recuerda, y también puede aprender algo nuevo: que ahora está a salvo.</p>
+  </div>
+  <hr class="rule">
+  <p class="lead" style="font-size:12pt">Con amor,<br>Deisy 🪽</p>
+  <div class="folio"><span>Alma Sana</span><span>02</span></div>
+</section>
+
+<!-- 3 · ANTES DE EMPEZAR -->
+<section class="page">
+  <span class="eyebrow">Antes de empezar</span>
+  <h2>Un espacio <em>seguro</em> para ti</h2>
+  <div class="stack">
+    <p>Este ebook habla de experiencias que pueden remover emociones. Por eso, antes de seguir, te pido tres cosas:</p>
+  </div>
+  <div class="box">
+    <h3>1 · Ve a tu ritmo</h3>
+    <p>Si algo se mueve fuerte dentro de ti, para, respira y vuelve cuando quieras. No hay prisa.</p>
+  </div>
+  <div class="box">
+    <h3>2 · No es un diagnóstico</h3>
+    <p>Los perfiles son una herramienta de autoconocimiento. No sustituyen la atención psicológica, médica ni terapéutica.</p>
+  </div>
+  <div class="box">
+    <h3>3 · Tu seguridad es lo primero</h3>
+    <p>Si estás viviendo una situación de violencia ahora mismo, pide ayuda:</p>
+    <p><strong>Colombia:</strong> Línea 155 · <strong>España:</strong> 016 · <strong>Otros países:</strong> el número de emergencias local.</p>
+  </div>
+  <div class="folio"><span>Alma Sana</span><span>03</span></div>
+</section>
+
+<!-- 4 · EL CUERPO RECUERDA -->
+<section class="page">
+  <span class="eyebrow">Capítulo 1</span>
+  <h2>Por qué tu cuerpo <em>recuerda</em></h2>
+  <div class="stack">
+    <p class="lead">Lo que la mente prefiere olvidar, el cuerpo lo guarda.</p>
+    <p>Cuando vivimos situaciones en las que nuestro cuerpo o nuestros límites no fueron respetados, el cuerpo aprende a protegerse. Esas experiencias pueden venir de la infancia, de una pareja, de comentarios sobre tu cuerpo o de una educación que te enseñó que el placer era algo prohibido.</p>
+    <p>Esa protección aparece de formas distintas:</p>
+  </div>
+  <div class="box">
+    <p><strong>Desconectarse</strong> para no sentir.</p>
+    <p><strong>Complacer</strong> para evitar el conflicto.</p>
+    <p><strong>Defenderse</strong> levantando una muralla.</p>
+    <p><strong>Buscar fuera</strong> la mirada que confirme tu valor.</p>
+  </div>
+  <p>Todas son estrategias de supervivencia. En su momento te ayudaron. Hoy quizá te impiden disfrutar de tu cuerpo, de tu sexualidad y de tus relaciones.</p>
+  <p class="gift">La buena noticia: lo que se aprendió, se puede transformar.</p>
+  <div class="folio"><span>Alma Sana</span><span>04</span></div>
+</section>
+
+<!-- 5 · CINCO ÁREAS -->
+<section class="page">
+  <span class="eyebrow">Capítulo 2</span>
+  <h2>Las cinco áreas que <em>vamos a mirar</em></h2>
+  <p>El test recorre cinco áreas de tu vida íntima. Juntas dibujan cómo vive hoy en ti lo que viviste.</p>
+  <div class="box"><h3>Tu cuerpo</h3><p>Si lo habitas o lo evitas, y cómo te miras frente al espejo.</p></div>
+  <div class="box"><h3>Tu autoestima</h3><p>Si tu valor nace de ti o depende de la mirada y el deseo de los demás.</p></div>
+  <div class="box"><h3>Tu sexualidad</h3><p>Si vives tu placer desde la presencia, la culpa, el control o la búsqueda.</p></div>
+  <div class="box"><h3>Tus límites</h3><p>Qué haces cuando alguien te pide algo íntimo que no te apetece.</p></div>
+  <div class="box"><h3>Tus relaciones</h3><p>Los patrones que se repiten cuando amas.</p></div>
+  <div class="folio"><span>Alma Sana</span><span>05</span></div>
+</section>
+
+<!-- 6 · TEST 1 -->
+<section class="page">
+  <span class="eyebrow">El test · Parte 1</span>
+  <h2>Tu cuerpo <em>recuerda</em></h2>
+  <p class="small">Elige en cada pregunta la respuesta que más se parezca a ti hoy y apunta su letra. Responde con lo primero que sientas.</p>
+  <div class="q"><span class="qt">1. Cuando piensas en tu cuerpo, sientes que…</span><ol>
+    <li><b>A</b>Es un lugar en el que casi no habito</li><li><b>B</b>Lo cuido sobre todo para gustar a los demás</li><li><b>C</b>Lo tengo siempre bajo control y en alerta</li><li><b>D</b>Es mi forma de atraer y sentirme valiosa</li><li><b>E</b>Estoy aprendiendo a habitarlo y a escucharlo</li></ol></div>
+  <div class="q"><span class="qt">2. Cuando te miras desnuda en el espejo…</span><ol>
+    <li><b>A</b>Evito mirarme; mi cuerpo me resulta ajeno</li><li><b>B</b>Pienso en lo que a otros les gustaría que cambiara</li><li><b>C</b>Me analizo con mucha exigencia</li><li><b>D</b>Me veo bien si me siento deseada</li><li><b>E</b>Puedo mirarme con bastante cariño</li></ol></div>
+  <div class="q"><span class="qt">3. En un encuentro íntimo, lo más habitual es que…</span><ol>
+    <li><b>A</b>Mi mente se vaya a otro sitio</li><li><b>B</b>Esté más pendiente de que la otra persona disfrute</li><li><b>C</b>Me cueste relajarme y bajar la guardia</li><li><b>D</b>Sienta mucha intensidad y después un vacío</li><li><b>E</b>Pueda estar presente y sentir</li></ol></div>
+  <div class="q"><span class="qt">4. Tu relación con tu propio placer es…</span><ol>
+    <li><b>A</b>Casi inexistente: no lo exploro</li><li><b>B</b>Con culpa: priorizarlo me parece egoísta</li><li><b>C</b>Con control: solo disfruto si todo está bajo control</li><li><b>D</b>De búsqueda: lo busco mucho, pero no me llena</li><li><b>E</b>De descubrimiento: lo exploro con curiosidad</li></ol></div>
+  <div class="folio"><span>Alma Sana</span><span>06</span></div>
+</section>
+
+<!-- 7 · TEST 2 -->
+<section class="page">
+  <span class="eyebrow">El test · Parte 2</span>
+  <div class="q"><span class="qt">5. Cuando alguien te pide algo íntimo que no te apetece…</span><ol>
+    <li><b>A</b>Sigo adelante casi en automático</li><li><b>B</b>Digo que sí para evitar conflictos</li><li><b>C</b>Digo que no de forma tajante y me alejo</li><li><b>D</b>Si me hace sentir deseada, acabo cediendo</li><li><b>E</b>Lo digo con claridad, aunque me cueste</li></ol></div>
+  <div class="q"><span class="qt">6. En tus relaciones, el patrón que más se repite es…</span><ol>
+    <li><b>A</b>Me cuesta sentir y mostrar lo que siento</li><li><b>B</b>Me entrego tanto que me pierdo a mí misma</li><li><b>C</b>Me cuesta confiar y pongo distancia</li><li><b>D</b>Me engancho a relaciones intensas que me hacen daño</li><li><b>E</b>Busco vínculos donde me siento libre y cuidada</li></ol></div>
+  <div class="q"><span class="qt">7. Cuando aparece un recuerdo difícil…</span><ol>
+    <li><b>A</b>Me bloqueo o no lo recuerdo con claridad</li><li><b>B</b>Lo minimizo: «no fue para tanto»</li><li><b>C</b>Me pongo en alerta, tensa o irritable</li><li><b>D</b>Busco distraerme con algo o con alguien</li><li><b>E</b>Lo reconozco y sé que puedo atenderlo</li></ol></div>
+  <div class="q"><span class="qt">8. Lo que más deseas ahora mismo es…</span><ol>
+    <li><b>A</b>Volver a sentir mi cuerpo</li><li><b>B</b>Aprender a decir «no» sin culpa</li><li><b>C</b>Sentirme segura para poder soltarme</li><li><b>D</b>Sentirme valiosa sin depender de nadie</li><li><b>E</b>Profundizar en mi sexualidad sagrada</li></ol></div>
+  <p class="small"><strong>Cuenta tus letras:</strong></p>
+  <div class="tally"><div>A</div><div>B</div><div>C</div><div>D</div><div>E</div></div>
+  <div class="folio"><span>Alma Sana</span><span>07</span></div>
+</section>
+
+<!-- 8 · LEER RESULTADO -->
+<section class="page">
+  <span class="eyebrow">Tu resultado</span>
+  <h2>Cómo leer <em>tu perfil</em></h2>
+  <p>La letra que más se repite es tu <strong>perfil principal</strong>. Si dos letras están casi empatadas, lee las dos: la mayoría de mujeres tenemos un perfil principal y otro secundario.</p>
+  <div class="box">
+    <p><strong>Mayoría de A</strong> · La mujer dormida <span style="float:right">pág. 09</span></p>
+    <p><strong>Mayoría de B</strong> · La mujer que complace <span style="float:right">pág. 10</span></p>
+    <p><strong>Mayoría de C</strong> · La mujer amurallada <span style="float:right">pág. 11</span></p>
+    <p><strong>Mayoría de D</strong> · La mujer que busca ser vista <span style="float:right">pág. 12</span></p>
+    <p><strong>Mayoría de E</strong> · La mujer que despierta <span style="float:right">pág. 13</span></p>
+  </div>
+  <p>Lee tu perfil sin juzgarte. Cada uno describe una forma de protección y también un don que llevas dentro.</p>
+  <p class="gift">No eres tu perfil. Tu perfil es solo el punto desde el que empiezas a caminar.</p>
+  <div class="folio"><span>Alma Sana</span><span>08</span></div>
+</section>
+
+<!-- 9 · A -->
+<section class="page">
+  <div class="ptitle"><span class="letter">A</span><div><span class="eyebrow">Perfil</span><h2>La mujer <em>dormida</em></h2></div></div>
+  <p class="lead">Tu cuerpo aprendió a desconectarse para protegerte.</p>
+  <dl class="facets">
+    <div><dt>Tu cuerpo</dt><dd>Lo sientes lejano, como si vivieras más en tu cabeza que en tu piel.</dd></div>
+    <div><dt>Tu sexualidad</dt><dd>Encuentros en piloto automático, poca sensibilidad y dificultad para sentir deseo.</dd></div>
+    <div><dt>Tus relaciones</dt><dd>Te cuesta expresar emociones. Puedes parecer distante aunque por dentro sientas mucho.</dd></div>
+    <div><dt>Tu autoestima</dt><dd>Una sensación de vacío, de no habitar del todo tu propia vida.</dd></div>
+  </dl>
+  <p class="gift">Tu don: esa desconexión te ayudó a sobrevivir. No hay nada roto en ti. Tu cuerpo solo espera sentirse a salvo para despertar.</p>
+  <div class="box"><span class="eyebrow">Una práctica para ti · Despertar los sentidos</span>
+    <p>Siéntate cinco minutos en un lugar tranquilo. Nombra en voz baja cinco cosas que ves, cuatro que puedes tocar, tres que oyes, dos que hueles y una que saboreas. Termina con una mano en el pecho y tres respiraciones lentas.</p></div>
+  <div class="folio"><span>Alma Sana</span><span>09</span></div>
+</section>
+
+<!-- 10 · B -->
+<section class="page">
+  <div class="ptitle"><span class="letter">B</span><div><span class="eyebrow">Perfil</span><h2>La mujer <em>que complace</em></h2></div></div>
+  <p class="lead">Aprendiste que estar a salvo era tener contentos a los demás.</p>
+  <dl class="facets">
+    <div><dt>Tu cuerpo</dt><dd>Lo cuidas y lo miras pensando en cómo lo verán los otros.</dd></div>
+    <div><dt>Tu sexualidad</dt><dd>El placer del otro va primero. Dices que sí cuando querías decir que no.</dd></div>
+    <div><dt>Tus relaciones</dt><dd>Te entregas hasta perderte y sientes culpa cuando pides algo para ti.</dd></div>
+    <div><dt>Tu autoestima</dt><dd>Tu valor depende de ser buena, útil o deseada.</dd></div>
+  </dl>
+  <p class="gift">Tu don: tienes una enorme capacidad de amar y de percibir a los demás. Ahora toca dirigir esa mirada hacia ti.</p>
+  <div class="box"><span class="eyebrow">Una práctica para ti · Mi pequeño no</span>
+    <p>Durante una semana, di que no a una cosa pequeña cada día: una invitación, un favor, un plan que no te apetece. Por la noche, escribe qué sentiste en el cuerpo antes y después. Cada límite es un acto de amor propio.</p></div>
+  <div class="folio"><span>Alma Sana</span><span>10</span></div>
+</section>
+
+<!-- 11 · C -->
+<section class="page">
+  <div class="ptitle"><span class="letter">C</span><div><span class="eyebrow">Perfil</span><h2>La mujer <em>amurallada</em></h2></div></div>
+  <p class="lead">Construiste una muralla para que nadie volviera a hacerte daño.</p>
+  <dl class="facets">
+    <div><dt>Tu cuerpo</dt><dd>Vive en alerta, con tensión en la pelvis, la mandíbula o los hombros.</dd></div>
+    <div><dt>Tu sexualidad</dt><dd>Te cuesta soltar. Necesitas control para disfrutar y a veces aparece el dolor.</dd></div>
+    <div><dt>Tus relaciones</dt><dd>Desconfías y te alejas cuando alguien se acerca de verdad.</dd></div>
+    <div><dt>Tu autoestima</dt><dd>Mucha exigencia y una voz interna dura: sientes que tienes que poder con todo sola.</dd></div>
+  </dl>
+  <p class="gift">Tu don: tu fuerza es real. Ahora puedes elegir a quién abres la puerta, en lugar de cerrarla a todos.</p>
+  <div class="box"><span class="eyebrow">Una práctica para ti · Mi lugar seguro</span>
+    <p>Crea un pequeño ritual diario: una vela, una manta, tu música. Inhala contando cuatro y exhala contando seis, durante cinco minutos. Al exhalar, suelta la mandíbula y los hombros. Tu cuerpo aprende que puede bajar la guardia.</p></div>
+  <div class="folio"><span>Alma Sana</span><span>11</span></div>
+</section>
+
+<!-- 12 · D -->
+<section class="page">
+  <div class="ptitle"><span class="letter">D</span><div><span class="eyebrow">Perfil</span><h2>La mujer que busca <em>ser vista</em></h2></div></div>
+  <p class="lead">Aprendiste a medir tu valor en la mirada y el deseo de los demás.</p>
+  <dl class="facets">
+    <div><dt>Tu cuerpo</dt><dd>Es tu forma de atraer. Te sientes bien en él sobre todo cuando alguien te desea.</dd></div>
+    <div><dt>Tu sexualidad</dt><dd>Buscas conexión a través del sexo: mucha intensidad y, después, vacío.</dd></div>
+    <div><dt>Tus relaciones</dt><dd>Vínculos intensos, a veces dañinos, y miedo a que te dejen.</dd></div>
+    <div><dt>Tu autoestima</dt><dd>Sube y baja según cuánto te validan.</dd></div>
+  </dl>
+  <p class="gift">Tu don: tu magnetismo y tu energía erótica son un regalo. Ahora puedes vivirlos desde ti, y no para conseguir amor.</p>
+  <div class="box"><span class="eyebrow">Una práctica para ti · Una cita contigo</span>
+    <p>Una vez por semana, regálate veinte minutos a solas haciendo algo que te dé placer: un baño, bailar, vestirte para ti. Sin fotos y sin contárselo a nadie. Después, escribe cómo te sentiste cuando nadie te miraba.</p></div>
+  <div class="folio"><span>Alma Sana</span><span>12</span></div>
+</section>
+
+<!-- 13 · E -->
+<section class="page">
+  <div class="ptitle"><span class="letter">E</span><div><span class="eyebrow">Perfil</span><h2>La mujer <em>que despierta</em></h2></div></div>
+  <p class="lead">Ya has empezado tu camino de regreso a ti.</p>
+  <dl class="facets">
+    <div><dt>Tu cuerpo</dt><dd>Estás aprendiendo a escucharlo, a habitarlo y a mirarlo con cariño.</dd></div>
+    <div><dt>Tu sexualidad</dt><dd>La vives con curiosidad y presencia, aunque queden zonas por explorar.</dd></div>
+    <div><dt>Tus relaciones</dt><dd>Buscas vínculos donde te sientes libre y cuidada, y reconoces cuándo no lo son.</dd></div>
+    <div><dt>Tu autoestima</dt><dd>Más estable, aunque a veces vuelvan viejas heridas.</dd></div>
+  </dl>
+  <p class="gift">Tu don: tu consciencia. Ya no vives en piloto automático: estás lista para profundizar.</p>
+  <div class="box"><span class="eyebrow">Una práctica para ti · Gratitud al cuerpo</span>
+    <p>Después de la ducha, pon un poco de aceite en tus manos y recorre tu cuerpo despacio, de los pies a la cara. En cada zona, di en silencio: «gracias por cuidarme». Es un primer paso hacia una sexualidad vivida como algo sagrado.</p></div>
+  <div class="folio"><span>Alma Sana</span><span>13</span></div>
+</section>
+
+<!-- 14 · SOBRE DEISY -->
+<section class="page">
+  <span class="eyebrow">Quién te acompaña</span>
+  <h2>Deisy <em>Ochoa Betancur</em></h2>
+  <div class="about">
+    <div class="photo"><img src="assets/deisy.jpg" alt="Deisy Ochoa Betancur"></div>
+    <div class="stack">
+      <p class="lead" style="font-size:12.5pt">Terapeuta integral. Acompaño a mujeres en su retorno sagrado a su cuerpo y a su placer.</p>
+      <p>Desde Alma Sana acompaño a mujeres de todo el mundo a sanar la relación con su cuerpo, su sexualidad y sus vínculos, con una mirada que une lo emocional, lo corporal y lo espiritual.</p>
+    </div>
+  </div>
+  <h3>Cómo puedo acompañarte</h3>
+  <ul class="serv">
+    <li><strong>Sexualidad sagrada:</strong> reconectar con tu placer, tu energía femenina y tu cuerpo.</li>
+    <li><strong>Biosanación emocional:</strong> sanar la raíz emocional de lo que hoy vive en tu cuerpo.</li>
+    <li><strong>Camino holístico:</strong> un acompañamiento integral para cuerpo, mente y alma.</li>
+    <li><strong>Inmersión en hielo:</strong> una experiencia para volver al presente a través del cuerpo.</li>
+    <li><strong>Retiro femenino Mujeres Salvajes:</strong> encuentro presencial con plazas limitadas.</li>
+    <li><strong>Consulta internacional:</strong> sesiones individuales online, estés donde estés.</li>
+  </ul>
+  <div class="folio"><span>Alma Sana</span><span>14</span></div>
+</section>
+
+<!-- 15 · RESERVA -->
+<section class="page wine">
+  <span class="eyebrow">Tu siguiente paso</span>
+  <h2 style="font-size:30pt">Reserva tu <em style="color:#f0d6cf">sesión</em> conmigo</h2>
+  <p style="font-family:var(--serif);font-style:italic;font-size:13pt;line-height:1.35;color:#f0dcd5">Ya conoces tu perfil. Ahora podemos mirar juntas qué necesita tu cuerpo para sentirse a salvo, sentir placer y elegir.</p>
+  <p>Escríbeme por WhatsApp contándome qué perfil te salió y qué sentiste al leerlo. Te responderé personalmente para ver qué acompañamiento encaja contigo.</p>
+  <div class="cta">
+    <div class="qr"><img src="assets/qr.png" alt="Código QR para escribir a Deisy por WhatsApp"></div>
+    <div class="stack">
+      <span class="eyebrow">WhatsApp</span>
+      <span class="phone">+57 301 338 8823</span>
+      <span class="small">Escanea el código con la cámara de tu móvil</span>
+      <span class="small">Instagram: @almasana111</span>
+      <span class="small">Email: info@almasana111.com</span>
+    </div>
+  </div>
+  <hr class="rule" style="background:rgba(244,235,224,.3)">
+  <p class="help">Este ebook es una herramienta de autoconocimiento y no sustituye la atención psicológica o médica. Si estás viviendo una situación de violencia: Colombia, Línea 155 · España, 016 · otros países, número de emergencias local.</p>
+  <div class="folio"><span>© Alma Sana</span><span>15</span></div>
+</section>
+
+</body>
+</html>
