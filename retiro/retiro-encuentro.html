@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"PenGram";src:url(../brand/fonts/BNPenAndGram-Light.otf);font-weight:300}
+@font-face{font-family:"PenGram";src:url(../brand/fonts/BNPenAndGram-Bold.otf);font-weight:700}
+@font-face{font-family:"Emilia";src:url(../brand/fonts/Emilia-Romagna.otf)}
+@font-face{font-family:"Aire";src:url(../brand/fonts/Aire-Bold-Italic-Pro.ttf)}
+:root{--vino:#741420;--crema:#f7f1ea;--rosa:#f3d9cf;--taupe:#c9b29e}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1920px;justify-content:center;padding-bottom:40px;overflow:hidden;background:var(--vino);color:var(--crema);font-family:"PenGram",sans-serif;display:flex;flex-direction:column;align-items:center;text-align:center}
+.logos{display:flex;align-items:center;gap:56px}
+.logos .alma{height:118px}
+.logos .div{width:2px;height:120px;background:rgba(247,241,234,.35)}
+.logos .sym{height:150px}
+.kicker{margin-top:80px;font-weight:700;font-size:30px;letter-spacing:.38em;text-transform:uppercase;color:var(--taupe)}
+h1{font-weight:400;line-height:.86;color:var(--rosa);padding:40px 0 46px;display:flex;flex-direction:column;align-items:center}
+h1 .m{font-family:"Aire";font-size:150px}
+h1 .s{font-family:"PenGram";font-weight:700;font-size:150px;letter-spacing:-.01em;color:var(--crema)}
+.intro{font-family:"Aire";font-size:50px;line-height:1.2;color:var(--crema)}
+.card{margin-top:48px;width:900px;border:2px solid rgba(247,241,234,.22);background:rgba(255,255,255,.06);border-radius:36px;padding:50px 70px}
+ul{list-style:none;display:grid;gap:24px;text-align:left}
+li{display:flex;gap:26px;align-items:flex-start;font-weight:300;font-size:40px;line-height:1.25}
+li::before{content:"";flex:none;width:22px;height:22px;margin-top:13px;border-radius:50%;border:3px solid var(--rosa)}
+li b{font-weight:700}
+.punt{margin-top:64px;font-weight:700;font-size:33px;letter-spacing:.2em;text-transform:uppercase;line-height:1.45;color:var(--crema)}
+.love{margin-top:52px;font-family:"Aire";font-size:50px;color:var(--rosa)}
+.sign{font-family:"Aire";font-size:84px;line-height:1.1;color:var(--crema);margin-top:4px}
+</style></head>
+<body>
+<div class="logos">
+  <img class="alma" src="../brand/logos/logo-crema.png" alt="Alma Sana">
+  <span class="div"></span>
+  <img class="sym" src="../brand/logos/simbolo-crema.png" alt="">
+</div>
+<div class="kicker">Retiro femenino</div>
+<h1><span class="m">Mujeres</span><span class="s">salvajes</span></h1>
+<p class="intro">Para nuestro encuentro debemos llevar:</p>
+<div class="card">
+  <ul>
+    <li><span><b>Implementos de aseo</b> personal</span></li>
+    <li><span><b>Sábana o cobija</b></span></li>
+    <li><span><b>Ropa elegante</b> para el sábado en la noche</span></li>
+    <li><span><b>Ropa cómoda</b> para hacer ejercicio</span></li>
+    <li><span><b>Repelente</b> y <b>bloqueador</b></span></li>
+  </ul>
+</div>
+<p class="punt">Por favor, llegar puntuales<br>al punto de recogida</p>
+<p class="love">Las amo mucho, con amor,</p>
+<p class="sign">Day</p>
+</body></html>
