@@ -1,17 +1,18 @@
 <!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:"PenGram";src:url(../brand/fonts/BNPenAndGram-Light.otf);font-weight:300}
+@font-face{font-family:"PenGram";src:url(../brand/fonts/BNPenAndGram-Bold.otf);font-weight:700}
+@font-face{font-family:"Emilia";src:url(../brand/fonts/Emilia-Romagna.otf)}
 @font-face{font-family:"Aire";src:url(../brand/fonts/Aire-Bold-Italic-Pro.ttf)}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{background:transparent}
 body{width:1200px;height:1200px;display:flex;align-items:center;justify-content:center}
 .c{width:1180px;height:1180px;border-radius:50%;background:#eee8dd;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#741420;text-align:center}
-.logo{width:380px}
-.by{font-family:"PenGram";font-weight:300;font-size:26px;letter-spacing:.3em;padding-left:.3em;margin-top:14px}
-.sym{height:380px;margin-top:62px}
-.t{font-family:"Aire";font-size:96px;line-height:1.02;margin-top:70px}
+.lw{position:relative;width:380px}.logo{width:380px;display:block}
+.by{position:absolute;right:-4px;top:100%;margin-top:20px;font-family:"Emilia";font-size:42px;line-height:1;white-space:nowrap}
+.sym{height:380px;margin-top:104px}
+.t{line-height:1;margin-top:70px}.t .m{display:block;font-family:"Aire";font-size:92px}.t .s{display:block;font-family:"PenGram";font-weight:700;font-size:96px;margin-top:4px}
 </style></head><body><div class="c">
-<img class="logo" src="../brand/logos/logo-vino-horizontal.png">
-<div class="by">by Dey</div>
+<div class="lw"><img class="logo" src="../brand/logos/logo-vino-horizontal.png"><div class="by">by Dey</div></div>
 <img class="sym" src="../brand/logos/simbolo-vino.png">
-<div class="t">Mujeres<br>salvajes</div>
+<div class="t"><span class="m">Mujeres</span><span class="s">salvajes</span></div>
 </div></body></html>
