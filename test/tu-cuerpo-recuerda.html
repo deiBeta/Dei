@@ -229,14 +229,14 @@ function showResult(){
     <div class="card">
       ${histLine}
       <p class="close">Tu cuerpo puede aprender a sentirse a salvo, a sentir placer y a elegir. No tienes que hacerlo sola. 🪽</p>
-      <a class="btn" href="https://api.whatsapp.com/send?phone=573013388823&text=${encodeURIComponent("Hola Deisy, hice el test «Tu cuerpo recuerda» y mi perfil es: " + PROFILES[main[0]].name)}" target="_blank" rel="noopener">Hablar con Deisy por WhatsApp</a>
+      <a class="btn" href="https://api.whatsapp.com/send?phone=573013388823&text=${encodeURIComponent("Hola Dei, hice el test «Tu cuerpo recuerda» y mi perfil es: " + PROFILES[main[0]].name)}" target="_blank" rel="noopener">Hablar con Dei por WhatsApp</a>
       <p class="note" style="text-align:center">WhatsApp: +57 301 338 8823</p>
       <button class="btn ghost" id="again">Repetir el test</button>
     </div>
     <div class="card ebook">
       <p class="eyebrow" style="text-align:center">Tu regalo</p>
       <h2 style="text-align:center">El ebook <em style="color:var(--wine)">Tu cuerpo recuerda</em></h2>
-      <p style="text-align:center">15 páginas con los cinco perfiles explicados a fondo, una práctica para cada uno y cómo reservar tu sesión con Deisy.</p>
+      <p style="text-align:center">15 páginas con los cinco perfiles explicados a fondo, una práctica para cada uno y cómo reservar tu sesión con Dei.</p>
       <button class="btn" id="dl">Descargar mi ebook</button>
       <p class="note" id="dlmsg" style="text-align:center" aria-live="polite"></p>
     </div>
@@ -266,7 +266,7 @@ async function downloadEbook(){
       msg.innerHTML = `Si no se ha abierto, <a href="${EBOOK}" target="_blank" rel="noopener" style="color:var(--wine)">pulsa aquí para abrir el ebook</a>.`;
     }
   } catch (e) {
-    msg.textContent = (e && e.code === "declined") ? "Puedes descargarlo cuando quieras pulsando el botón." : "No se ha podido descargar ahora. Escríbele a Deisy por WhatsApp y te lo envía.";
+    msg.textContent = (e && e.code === "declined") ? "Puedes descargarlo cuando quieras pulsando el botón." : "No se ha podido descargar ahora. Escríbele a Dei por WhatsApp y te lo envía.";
   }
   btn.disabled = false;
 }
