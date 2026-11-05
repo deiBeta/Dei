@@ -4,7 +4,7 @@ Embudo: https://systeme.io/dashboard/funnels/7777643
 
 | Paso | Página | Enlace |
 |---|---|---|
-| 1 | Página de ventas | https://deisybeta27.systeme.io/ed168d72 |
+| 1 | Página de ventas | https://deisybeta27.systeme.io/reto-21-dias |
 | 2 | Pago (70 USD, PayPal) | https://deisybeta27.systeme.io/1ff4aedd |
 | 3 | Gracias por tu compra | https://deisybeta27.systeme.io/7212fa5e |
 
