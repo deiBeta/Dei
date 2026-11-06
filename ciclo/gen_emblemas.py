@@ -22,15 +22,16 @@ M={
 <path d="M60 110c-4 18 2 34 8 46M140 110c4 18-2 34-8 46" fill="none" stroke="{G}" stroke-width="2" stroke-linecap="round"/>
 <path d="M68 156l-4 8M132 156l4 8" stroke="{G}" stroke-width="2" stroke-linecap="round"/>''',
 # Madre: sol radiante con corazón
-"verano":f'''<path d="M86 70c-12-4-18 4-16 12 6-2 12-6 16-12zM114 70c12-4 18 4 16 12-6-2-12-6-16-12z" fill="{G}"/>
-<circle cx="100" cy="60" r="17" fill="{C}"/>
-<path d="M100 48c8 0 12 6 10 12s-9 8-14 5-5-9 0-11 8 1 7 5" fill="none" stroke="#741420" stroke-width="2.2" stroke-linecap="round"/>
-<path d="M85 58c0 9 6 17 15 17s15-8 15-17" fill="none" stroke="#741420" stroke-width="1.8" opacity=".55"/>
-<path d="M100 75v6" stroke="{C}" stroke-width="2"/>
-<path d="M66 84h68c0 22-15 38-34 38S66 106 66 84z" fill="{C}"/>
-<path d="M72 92c6 0 6 4 12 4s6-4 12-4 6 4 12 4 6-4 12-4 6 4 10 4" fill="none" stroke="#741420" stroke-width="2" opacity=".6"/>
-<rect x="95" y="120" width="10" height="26" fill="{C}"/><path d="M76 160c0-10 10-14 24-14s24 4 24 14z" fill="{C}"/>
-<g fill="{G}"><circle cx="58" cy="76" r="2.4"/><circle cx="142" cy="76" r="2.4"/><circle cx="50" cy="100" r="1.6"/><circle cx="150" cy="100" r="1.6"/></g>''',
+"verano":f'''<path d="M100 172V112" stroke="{C}" stroke-width="3" stroke-linecap="round"/>
+<path d="M100 150c-16 0-26-10-28-22 14-2 26 6 28 22z" fill="{G}"/><path d="M100 136c16 0 26-10 28-22-14-2-26 6-28 22z" fill="{G}"/>
+<path d="M60 74c0-22 18-38 40-38s40 16 40 38c0 24-18 40-40 40S60 98 60 74z" fill="{C}"/>
+<g fill="none" stroke="#741420" stroke-width="2.6" stroke-linecap="round" opacity=".85">
+<path d="M100 54c10 0 16 7 14 15s-11 11-17 8-7-11-1-14 10 1 9 6"/>
+<path d="M78 66c2 16 12 26 22 26s20-8 22-24"/>
+<path d="M68 82c6 14 18 22 32 22s26-8 32-22"/>
+<path d="M82 46c-6 6-8 14-6 22M118 46c6 6 8 14 6 22"/></g>
+<g fill="{G}"><circle cx="54" cy="56" r="2.2"/><circle cx="148" cy="60" r="2.2"/></g>
+''',
 # Hechicera: hojas de otoño cayendo + espiral
 "otono":f'''<circle cx="100" cy="88" r="36" fill="{C}" opacity=".95"/>
 <circle cx="100" cy="88" r="36" fill="none" stroke="{G}" stroke-width="1.5"/>
