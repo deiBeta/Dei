@@ -28,7 +28,12 @@
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;
   padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:32px 48px}
 .wrap{max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
-.brand{text-align:center;line-height:.9;color:var(--wine)}
+.brand{text-align:center;line-height:0}
+.brand img{width:min(150px,40vw);height:auto;max-width:100%}
+.logo-dark{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo-dark{display:inline}:root:not([data-theme="light"]) .logo-light{display:none}}
+:root[data-theme="dark"] .logo-dark{display:inline}
+:root[data-theme="dark"] .logo-light{display:none}
 .brand .a{font-family:var(--display);font-style:italic;font-size:2.1rem;font-weight:500;display:block}
 .brand .s{font-family:var(--body);font-weight:600;font-size:1.6rem;letter-spacing:.02em}
 h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0;color:var(--ink)}
@@ -87,7 +92,7 @@ dd{margin:2px 0 0}
 @media (max-width:440px){.wheel{grid-template-columns:1fr}}
 </style>
 <div class="wrap">
-  <div class="brand" aria-label="Alma Sana"><span class="a">alma</span><span class="s">sana</span></div>
+  <div class="brand"><img class="logo-light" src="logo-vino.png" alt="Alma Sana"><img class="logo-dark" src="logo-crema.png" alt="Alma Sana"></div>
 
   <section id="intro" class="wrap" style="gap:24px">
     <h1>Tu ciclo, <em>tu ritmo</em></h1>
@@ -266,6 +271,16 @@ function showResult(){
       <a class="btn" href="https://api.whatsapp.com/send?phone=573013388823&text=${encodeURIComponent("Hola Dei, hice el test «Tu ciclo, tu ritmo» y me salió: " + p.name + ". Quiero saber de tus talleres.")}" target="_blank" rel="noopener">Hablar con Dei por WhatsApp</a>
       <p class="note" style="text-align:center">WhatsApp: +57 301 338 8823 · @almasana111</p>
       <button class="btn ghost" id="again">Repetir el test</button>
+    </div>
+    <div class="card">
+      <p class="eyebrow" style="text-align:center">Cuida tu salud íntima</p>
+      <h2 style="text-align:center">Recomendaciones para ti</h2>
+      <ul class="tips">
+        <li><strong>Hazte tu citología</strong> con la frecuencia que te indique tu médica o ginecóloga. Es la forma de detectar a tiempo cambios en tu cuello uterino.</li>
+        <li><strong>Hazte un examen de flujo</strong> si notas cambios en el color, el olor o la cantidad, o si sientes picazón o ardor. Tu flujo también te habla.</li>
+        <li><strong>Ve a tu control ginecológico</strong> al menos una vez al año, aunque te sientas bien.</li>
+        <li><strong>Si estás pensando en planificar</strong>, infórmate sobre métodos naturales, como el conocimiento de la fertilidad: observar tu moco cervical y tu temperatura basal. Apréndelos con una profesional para usarlos bien, y recuerda que no protegen de infecciones de transmisión sexual; para eso, el condón.</li>
+      </ul>
     </div>
     <div class="help">
       <p><strong>Cuida tu salud.</strong> Si tienes dolor menstrual muy fuerte, sangrados muy abundantes, ciclos muy irregulares o síntomas que te impiden hacer tu vida, consulta con tu médica o ginecóloga.</p>
